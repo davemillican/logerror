@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax work</title>
+</head>
+<body>
+
+    <input>
+    <button></button>
+    <div id="header"></div>
+    <main></main>
+<script id ="city-template" type='text/template'>
+    <h1>Forecast for <%= city.name %></h1>
+    <h2>Country: <%= city.country %></h2>
+    <h2>Latitude: <%= city.coord.lat %></h2>
+    <h2>Longitude: <%= city.coord.lon %></h2>
+</script>
+<script id ="weather-template" type='text/template'>
+    <div class="report-item">
+        <ul>
+            <li>Date: <%= new Date(get("dt") * 1000).toDateString() %> </li>
+            <li><%= get('weather')[0].description %></li>
+            <li>Hi Temp: <%= fTempHigh() %> </li> 
+            <li>Lo Temp: <%= fTempLow() %> </li> 
+            <li>Humidity: <%= get('humidity') %>%</li> 
+            <li>Wind: <%= get('speed') %> MPH <%= degreesToDirection(get('deg')) %></li> 
+
+
+        </ul>
+    </div>
+    
+</script>
+<script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="node_modules/backbone/backbone.js"></script>
+<script type="text/javascript" src="src/js/main.js"></script>
+</body>
+</html>
