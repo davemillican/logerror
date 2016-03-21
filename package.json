@@ -5,8 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall":"cp node_modules/normalize.css/normalize.css src/scss/_normalize.scss"
+    "build": "npm run build:js && npm run build:css",
+    "watch:js": "watchify src/js/main.js -o build/bundle.js",
+    "watch:css": "sass --watch src/scss:build/css",
+    "watch": "npm run watch:js & npm run watch:css",
+    "build:js":"browserify src/js/main.js -o build/bundle.js",
+    "build:css":"sass src/scss/main.scss build/main.css",
+    "postinstall": "cp node_modules/normalize.css/normalize.css src/scss/_normalize.scss"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "watchify": "^3.7.0"
+  }
 }
