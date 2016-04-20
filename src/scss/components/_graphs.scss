@@ -1,0 +1,60 @@
+
+.slice text {
+    font-size: 16pt;
+    font-family: Arial;
+}   
+
+svg {
+  font: 0px sans-serif;
+}
+
+.line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+  stroke-width: 5px;
+}
+
+.pie-wrapper {
+    display: inline-block;
+    width: 300px;
+    color: black;
+}
+
+p {
+    margin: 0;
+}
+
+.pie-title {
+    margin-left: 2em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    font-size: 1.4em;
+}
+
+.pie-chart {
+    margin-left: 3em;
+}
+.pie-stats {
+    display: inline-block;
+    font-size: 1.4em;
+    color: $white;
+    width: 300px;
+    vertical-align: top;
+    height: 400px;
+    padding-top:100px;
+    
+}
+
+#line-graph{
+  svg{
+    width: 95%;
+  }
+}

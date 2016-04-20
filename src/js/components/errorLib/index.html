@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error log Client</title>
+</head>
+<body>
+<script type="text/javascript" src="errorLib.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="errorLib.js"></script>
+<script type="text/javascript">
+ 
+    var count = 0;
+
+    function logEvent () {
+
+        initErrorLog();
+        
+        setTimeout(function () {
+            app.append();
+        }, 0);
+
+        //errorLog("Recovered Error: map out of sync");
+
+        if (count++ < 20) {
+            setTimeout( logEvent, 800);
+        }
+        
+    }
+
+    setTimeout( logEvent, 800);
+
+
+</script>
+
+</body>
+</html>

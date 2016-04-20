@@ -1,0 +1,44 @@
+@import 'variables';
+
+.nav {
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.nav h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 2rem;
+    line-height: $nav-height;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    color: $pitch;
+}
+
+.nav button {
+    font-size: 1rem;
+    /* height: 36px; */
+    background: transparent;
+    border: none;
+    padding: 5px 1em;
+    outline: none;
+    font-family: 'Merriweather Sans', sans-serif;
+    
+}
+
+.nav button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.nav h1,
+.nav button {
+    vertical-align: middle;
+}
+
+.nav-dock{
+    width: 85%;
+    margin: 3% auto;
+    button{
+        box-shadow: none;
+    }
+}

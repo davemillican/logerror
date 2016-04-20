@@ -1,0 +1,21 @@
+@import 'variables';
+
+.region {
+    padding: 2em;
+    min-height: 500px;
+}
+
+.region--dark {
+    background: #1F4761;
+    color: $white;
+}
+
+.region--darkest {
+    background: #0D2E44;
+    color: $white;
+}
+
+.region h2 {
+    font-size: 2.25em;
+    margin-top: 0;
+}
